@@ -82,7 +82,7 @@ public class TestListExamples {
 
   @Test
   public void testFilterMoon() {
-    List<String> list = Arrays.asList("this", "is", "not", "the", "moon");
+    List<String> list = Arrays.asList("this", "is", "not", "the", "moon", "sun");
     List<String> filtered = ListExamples.filter(list, new IsMoon());
     List<String> expected = Arrays.asList("moon");
     assertEquals(expected, filtered);
@@ -98,7 +98,7 @@ public class TestListExamples {
 
   @Test
   public void testFilterSun() {
-    List<String> list = Arrays.asList("this", "is", "not", "the", "sun");
+    List<String> list = Arrays.asList("this", "is", "not", "the", "sun", "moon");
     List<String> filtered = ListExamples.filter(list, new IsSun());
     List<String> expected = Arrays.asList("sun");
     assertEquals(expected, filtered);
