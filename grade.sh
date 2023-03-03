@@ -31,7 +31,7 @@ java -cp ".;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar" org.junit.runn
 if [[ $? != 0 ]]
 then
     echo 'Failed tests'
-    cat testErr.txt | grep -v -w "at"
+    cat testErr.txt | grep -v -w "at" | grep -v -w "Time:" | grep -v -x ".E" | grep -v -x "JUnit version 4.13.2"
     exit
 fi
 
